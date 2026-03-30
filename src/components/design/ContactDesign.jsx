@@ -52,7 +52,6 @@ export default function ContactDesign() {
 
   return (
     <section className="contact-page">
-      <div className="bg-grid-layer"></div>
       <div className="contact-wrapper">
 
         {/* ══ TOP ══ */}

@@ -10,18 +10,7 @@
   box-sizing: border-box;
   overflow: hidden;
 }
-.bg-grid-layer {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(to right, var(--accent-dim) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--accent-dim) 1px, transparent 1px);
-  background-size: 50px 50px;
-  mask-image: radial-gradient(circle at center, black, transparent 85%);
-  z-index: 1;
-  pointer-events: none;
-  transition: background-image 0.7s ease;
-}
+
 .certifications-container {
   max-width: 1300px;
   margin: 0 auto;

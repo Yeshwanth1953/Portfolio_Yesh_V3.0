@@ -25,7 +25,6 @@ const certifications = [
 export default function Certifications() {
   return (
     <section className="certifications-page">
-      <div className="bg-grid-layer"></div>
       <div className="certifications-container">
 
         <div className="cert-header-content">

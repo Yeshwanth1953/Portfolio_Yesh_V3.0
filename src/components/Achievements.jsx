@@ -106,7 +106,6 @@ export default function Achievements() {
 
   return (
     <section className="ach-page">
-      <div className="bg-grid-layer"></div>
       <div className="ach-container">
 
         {/* Header */}

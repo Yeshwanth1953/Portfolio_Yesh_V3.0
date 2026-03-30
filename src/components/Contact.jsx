@@ -72,8 +72,6 @@ export default function Contact() {
 
   return (
     <section className="contact-page">
-      {/* Background — same as other pages */}
-      <div className="bg-grid-layer"></div>
 
       <div className="contact-wrapper">
 
