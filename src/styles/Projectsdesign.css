@@ -1,0 +1,43 @@
+/* Design process pills */
+.design-process-pills {
+  display: flex; gap: 12px; margin-bottom: 52px; flex-wrap: wrap;
+}
+.process-pill {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 16px; border-radius: 999px;
+  border: 1px solid var(--accent-border);
+  background: var(--accent-dim);
+  font-size: 0.8rem; color: #cbd5f5;
+  transition: all 0.3s ease;
+}
+.process-pill:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.process-num { font-size: 0.65rem; color: var(--accent); font-weight: 700; letter-spacing: 1px; transition: color 0.7s ease; }
+
+/* Placeholder image */
+.design-img-placeholder {
+  width: 100%; height: 180px; border-radius: 12px; margin-bottom: 16px;
+  background: var(--accent-dim); border: 1px dashed var(--accent-border);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; transition: background 0.7s ease, border-color 0.7s ease;
+}
+.design-img-icon { font-size: 2.2rem; opacity: 0.5; }
+
+.design-type-badge {
+  position: absolute; top: 10px; left: 10px;
+  font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase;
+  font-weight: 700; color: #020617; background: var(--accent);
+  padding: 4px 10px; border-radius: 6px; transition: background 0.7s ease;
+}
+.design-status {
+  position: absolute; top: 10px; right: 10px;
+  font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase;
+  font-weight: 600; padding: 4px 10px; border-radius: 6px;
+}
+.design-status.live { color: #4ade80; background: rgba(74,222,128,0.12); border: 1px solid rgba(74,222,128,0.25); }
+.design-status.soon { color: #94a3b8; background: rgba(148,163,184,0.08); border: 1px solid rgba(148,163,184,0.15); }
+
+/* Coming soon btn */
+.btn.coming-soon-btn {
+  padding: 10px 22px; border-radius: 999px; font-size: 0.85rem;
+  color: #475569; border: 1px dashed #334155; background: transparent; cursor: not-allowed;
+}

@@ -1,0 +1,40 @@
+/* =========================
+   CERTIFICATIONS DESIGN MODE
+   Extra styles only
+========================= */
+
+/* Placeholder card */
+.cert-placeholder {
+  opacity: 0.7;
+  border-style: dashed !important;
+}
+.cert-placeholder:hover {
+  opacity: 1;
+}
+
+/* Coming soon tag inline */
+.cert-coming-soon {
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin-left: 10px;
+  vertical-align: middle;
+  font-weight: 600;
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+/* In progress link style */
+.placeholder-link {
+  color: var(--accent) !important;
+  font-style: italic;
+  cursor: default;
+  font-size: 0.85rem !important;
+  border-color: var(--accent-border) !important;
+  background: var(--accent-dim) !important;
+  transition: background 0.6s ease, color 0.6s ease !important;
+}

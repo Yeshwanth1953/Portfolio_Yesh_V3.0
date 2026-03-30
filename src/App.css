@@ -1,96 +1,109 @@
 /* =========================
-   GLOBAL BODY STYLES
-   ========================= */
-
+   GLOBAL RESET
+========================= */
 #root {
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
+/* =========================
+   COLOR VARIABLE SYSTEM
+   Dev Mode    → Sky Blue
+   Design Mode → Royal Grey + White
+========================= */
+:root {
+  --accent:        #38bdf8;
+  --accent-dim:    rgba(56, 189, 248, 0.12);
+  --accent-glow:   rgba(56, 189, 248, 0.35);
+  --accent-border: rgba(56, 189, 248, 0.18);
+  --accent-hover:  #0ea5e9;
+  --bg-glow-1:     rgba(56, 189, 248, 0.14);
+  --bg-glow-2:     rgba(14, 165, 233, 0.10);
+}
 
+body.design-mode {
+  --accent:        #e2e8f0;
+  --accent-dim:    rgba(226, 232, 240, 0.10);
+  --accent-glow:   rgba(226, 232, 240, 0.22);
+  --accent-border: rgba(226, 232, 240, 0.18);
+  --accent-hover:  #ffffff;
+  --bg-glow-1:     rgba(226, 232, 240, 0.06);
+  --bg-glow-2:     rgba(148, 163, 184, 0.05);
+}
+
+/* =========================
+   BODY
+========================= */
 body {
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
   color: #e5e7eb;
+  overflow-x: hidden;
+  transition: background 0.7s ease;
+}
 
-  /* Animated gradient background */
-  background: linear-gradient(
-    -45deg,
-    #020617,
-    #020024,
-    #0f172a,
-    #020617
-  );
+/* Dev — deep navy */
+body:not(.design-mode) {
+  background: linear-gradient(-45deg, #020617, #020024, #0f172a, #020617);
   background-size: 400% 400%;
   animation: gradientBG 18s ease infinite;
-  overflow-x: hidden;
+}
+
+/* Design — royal charcoal grey */
+body.design-mode {
+  background: linear-gradient(-45deg, #1e2433, #252d3d, #1a2030, #1e2433);
+  background-size: 400% 400%;
+  animation: gradientBG 18s ease infinite;
 }
 
 .home-hero {
-  padding-top: 70px; /* same as navbar height */
+  padding-top: 70px;
 }
-
 
 /* =========================
    GLOW OVERLAY
-   ========================= */
-
+========================= */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at top left, rgba(56,189,248,0.18), transparent 40%),
-    radial-gradient(circle at bottom right, rgba(14,165,233,0.15), transparent 40%);
+    radial-gradient(circle at top left,     var(--bg-glow-1), transparent 40%),
+    radial-gradient(circle at bottom right, var(--bg-glow-2), transparent 40%);
   pointer-events: none;
   z-index: 0;
+  transition: background 0.7s ease;
 }
 
 /* =========================
-   FLOATING PARTICLES
-   ========================= */
-
+   PARTICLES
+========================= */
 .particles {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 1;
 }
-
 .particles span {
   position: absolute;
   bottom: -10px;
   width: 6px;
   height: 6px;
-  background: rgba(56, 189, 248, 0.6);
+  background: var(--accent-dim);
   border-radius: 50%;
   animation: rise linear infinite;
+  transition: background 0.7s ease;
 }
-
-/* Smaller secondary particles */
 .particles span:nth-child(odd) {
   width: 4px;
   height: 4px;
-  background: rgba(14, 165, 233, 0.4);
 }
-
-/* Animation */
 @keyframes rise {
-  0% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-  15% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-120vh);
-    opacity: 0;
-  }
+  0%   { transform: translateY(0);      opacity: 0; }
+  15%  { opacity: 1; }
+  100% { transform: translateY(-120vh); opacity: 0; }
 }
-
-/* Particle positions & speeds */
 .particles span:nth-child(1)  { left: 5%;  animation-duration: 18s; }
 .particles span:nth-child(2)  { left: 12%; animation-duration: 22s; }
 .particles span:nth-child(3)  { left: 20%; animation-duration: 16s; }
@@ -103,23 +116,9 @@ body::before {
 .particles span:nth-child(10) { left: 76%; animation-duration: 17s; }
 .particles span:nth-child(11) { left: 84%; animation-duration: 23s; }
 .particles span:nth-child(12) { left: 92%; animation-duration: 19s; }
-.particles span:nth-child(n+13) {
-  left: calc(100% * var(--i) / 50);
-  animation-duration: calc(15s + (var(--i) * 0.5s));
-}
-
-/* =========================
-   GRADIENT BACKGROUND ANIMATION
-   ========================= */
 
 @keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0%   { background-position: 0%   50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
 }

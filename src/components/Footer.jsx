@@ -37,7 +37,6 @@ export default function Footer() {
         <div className="footer-links">
           <h4>Quick Links</h4>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/skills">Skills</NavLink>
           <NavLink to="/projects">Projects</NavLink>
           <NavLink to="/certifications">Certifications</NavLink>
           <NavLink to="/achievements">Achievements</NavLink>
@@ -59,7 +58,7 @@ export default function Footer() {
 
           <p>
             <FaPhone />
-            +91 8019483579
+            <a href="tel:+91 8019483579">+91 8019483579</a>
           </p>
         </div>
       </div>
