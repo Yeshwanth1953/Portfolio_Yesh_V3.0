@@ -102,13 +102,13 @@ The output will be generated in the `dist/` folder.
 (Add your deployed Vercel link here)
 
 Example:
-https://your-portfolio.vercel.app
+https://portfolio-yeshwanth.vercel.app/
 
 ---
 
 ## 📸 Screenshots
 
-(Add screenshots of your portfolio UI)
+<img width="1919" height="1079" alt="Screenshot 2026-04-02 000415" src="https://github.com/user-attachments/assets/b6bf2dc9-6896-4a10-97d2-7fb88840343d" />
 
 ---
 
