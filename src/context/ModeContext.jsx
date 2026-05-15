@@ -1,4 +1,4 @@
-/*import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const ModeContext = createContext();
 
@@ -18,27 +18,6 @@ export function ModeProvider({ children }) {
 
   return (
     <ModeContext.Provider value={{ mode, toggleMode }}>
-      {children}
-    </ModeContext.Provider>
-  );
-}
-
-export function useMode() {
-  return useContext(ModeContext);
-} */
-
-import { createContext, useContext } from "react";
-
-const ModeContext = createContext();
-
-export function ModeProvider({ children }) {
-  return (
-    <ModeContext.Provider
-      value={{
-        mode: "dev",
-        toggleMode: () => {},
-      }}
-    >
       {children}
     </ModeContext.Provider>
   );
