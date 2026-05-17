@@ -6,6 +6,7 @@ import { useMode } from "../context/ModeContext";
 export default function Navbar() {
   // const { mode, toggleMode } = useMode();
   const { mode } = useMode();
+  
 
   return (
     <header className="navbar">
