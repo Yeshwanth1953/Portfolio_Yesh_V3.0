@@ -4,7 +4,8 @@ import { NavLink } from "react-router-dom";
 import { useMode } from "../context/ModeContext";
 
 export default function Navbar() {
-  const { mode, toggleMode } = useMode();
+  // const { mode, toggleMode } = useMode();
+  const { mode } = useMode();
 
   return (
     <header className="navbar">
@@ -20,14 +21,14 @@ export default function Navbar() {
         </ul>
 
         {/* Dev / Design toggle */}
-        <div className="mode-toggle" onClick={toggleMode} title="Switch mode">
+      { /*  <div className="mode-toggle" onClick={toggleMode} title="Switch mode">
           <span className={`mode-label ${mode === "dev" ? "active" : ""}`}>Dev</span>
           <div className={`toggle-track ${mode === "design" ? "on" : ""}`}>
             <div className="toggle-thumb" />
           </div>
           <span className={`mode-label ${mode === "design" ? "active" : ""}`}>Design</span>
-        </div>
-
+        </div> */ }
+ 
       </div>
     </header>
   );
